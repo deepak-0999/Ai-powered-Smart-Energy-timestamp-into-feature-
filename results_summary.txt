@@ -1,0 +1,36 @@
+=======================================================
+ AI-Powered Smart Energy Forecasting — Results Summary
+=======================================================
+
+Dataset: 2022-01-08 to 2024-12-31
+Total hours: 26,113  |  Anomalies: 210
+
+FORECASTING METRICS (GBM on 60-day test set):
+  RMSE: 203.8
+  MAE: 89.27
+  MAPE (%): 3.36
+  R2: 0.8933
+
+FORECASTING METRICS (Exp. Smoothing Baseline):
+  RMSE: 423.06
+  MAE: 331.34
+  MAPE (%): 11.0
+  R2: 0.5403
+
+OPTIMIZATION SUMMARY (60-day horizon):
+  total_hours: 1440
+  peak_hours: 600
+  dr_events: 79
+  total_cost_rs: 16714385.0
+  avg_cost_per_hr_rs: 11607.0
+  renewable_coverage_%: 8.1
+  battery_charge_hours: 448
+  battery_discharge_hrs: 220
+  avg_soc_%: 80.5
+
+CROSS-VALIDATION (5-fold walk-forward):
+  Mean RMSE:   245.84 MW
+  Mean MAPE:   4.15%
+  Mean R²:     0.9105
+
+Generated: 2026-03-24 16:25:58
