@@ -1,31 +1,23 @@
-# Lore — Python API Backend
-
-FastAPI backend for the Lore AI storytelling engine.  
-Streaming story generation + structured A/B/C choices via Claude.
-
----
+# AI Powered Smart Energy System(Convert Timestamp into features)
 
 ## Quick start
 
 ```bash
-# 1. Clone / copy this folder
-cd lore-backend
-
-# 2. Create virtual environment
+# 1. Create virtual environment
 python -m venv .venv
 source .venv/bin/activate          # Windows: .venv\Scripts\activate
 
-# 3. Install dependencies
+# 2. Install dependencies
 pip install -r requirements.txt
 
-# 4. Set your API key
+# 3. Set your API key
 cp .env.example .env
 # Edit .env → ANTHROPIC_API_KEY=sk-ant-...
 
-# 5. Run
+# 4. Run
 python run.py
 # → http://localhost:8000
-# → http://localhost:8000/docs   (Swagger UI)
+# → http://localhost:8000/docs 
 ```
 
 ---
@@ -44,27 +36,6 @@ Returns all 4 genres with metadata (id, label, description, icon, recommended).
 
 ### `POST /session/start`
 Start a new story session. Returns the opening scene synchronously.
-
-**Request**
-```json
-{ "genre": "fantasy", "player_name": "Aria" }
-```
-
-**Response**
-```json
-{
-  "session_id": "uuid",
-  "genre": "fantasy",
-  "turn": 1,
-  "chapter_title": "The Iron Gate",
-  "story": "The gate groans open...",
-  "choices": [
-    { "key": "A", "title": "Enter the cave", "subtitle": "Darkness, risk, possible treasure" },
-    { "key": "B", "title": "Follow the torchlight", "subtitle": "Someone else is down here" },
-    { "key": "C", "title": "Hold position", "subtitle": "Information before action" }
-  ]
-}
-```
 
 ---
 
