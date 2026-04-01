@@ -12,7 +12,6 @@ pip install -r requirements.txt
 
 # 3. Set your API key
 cp .env.example .env
-# Edit .env → ANTHROPIC_API_KEY=sk-ant-...
 
 # 4. Run
 python run.py
@@ -135,7 +134,6 @@ lore-backend/
 ├── models.py        ← Pydantic request/response types
 ├── config.py        ← Settings (env vars / .env)
 ├── session_store.py ← In-memory session store with TTL
-├── prompts.py       ← All Claude system prompts + builders
 ├── run.py           ← Entry point (uvicorn)
 ├── test_api.py      ← pytest test suite
 ├── requirements.txt
